@@ -1,190 +1,33 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>What type of nen user are you?</title>
-    <meta http-equiv="refresh" content="1000" charset="UTF-8">
-    <style>
-        #Mydiv{
-            padding-top: 500px;
-        }
-        h1{
-            color:rgb(22, 12, 158);
-            font-size: 400%;
-            font-family: 'Times New Roman', Times, serif;
-        }
-        .button {
-            border: solid 3px ghostwhite;
-            color: rgb(53, 11, 131);
-            background: rgb(185, 120, 120);
-            padding:20px 36px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 50px;
-            font-family:'Times New Roman', Times, serif;
-        }
-        #buttons{
-            width: 300px;
-            height: 300px;
-            position: absolute;
-            overflow: hidden;
-        }
-        
-            #Allquestions{
-                background-image:url(hunters.avif);
-                background-repeat:no-repeat;
-                color: azure;
-                width: 3000px;
-                height: 3000px;
-                padding-left: 30px;
-                padding-right: 30px;
-                margin: 30px;
-            }
-        
-        p{
-            font-size: 300%;
-            color: purple;
-            font-family:'Times New Roman', Times, serif
-        }
-    </style>
+  <link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
 </head>
-<body>
+<body style="background-color:rgb(1, 1, 1);">
+  <ul>
+    <li><a href="aboutme.html">About Me</a></li>
+    <li><a href="store.html">Store</a></li>
     
-    <div id="Allquestions">
-        <h1>What is your favorite genre of music?</h1><p></p>
-        <div id="MyDiv">
-        <button class="button" id="buttonA">Rock and roll</button>
-        <button class="button" id="buttonB">Classical </button>
-        <button class="button" id="buttonC">Heavy Metal</button>
-        <button class="button" id="buttonD">Opera</button>
-        </div>
-    </div>
-    <script   src="https://code.jquery.com/jquery-3.6.1.slim.min.js"   integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="   crossorigin="anonymous"></script>
+  </ul>
+  <a href="index.html"><img id="logo" width="325" height="325" src="Avatar.png"></a>    
+  <div id="header">
+    <h1>~The ToastyRocket Experience~</h1>
+  </div>
+<div id="homepagephotos">
+    <img class="wte" src="Khary.jpg">
+    <img class="wte" src="Screenshot_4.jpg">
+    <img class="wte" src="Screenshot_3.jpg">
+    <img class="wte" src="Screenshot_2.jpg">
+    <img class="wte" src="Screenshot_5.jpg">
+</div>
+<hr>
+    
+  
     
     
-    <script>
-        let x=0;
-        $("#buttonA").on("click", function(){
-            x+=1;
-            console.log(x);
-        })
-        $("#buttonB").on("click", function(){
-            x+=2
-            console.log(x);
-        })
-        $("#buttonC").on("click", function(){
-            x+=3
-            console.log(x);
-        })
-        $("#buttonD").on("click", function(){
-            x+=4
-            console.log(x);
-        })
 
-        let question2 = function(){
-          console.log("next question");
-         $("h1").text("What keeps you up at night?");
-        $("#buttonA").text("My fears");
-        $("#buttonB").text("Pain");
-        $("#buttonC").text("Too much energy")
-        $("#buttonD").text("Nothing");
-        $("button").on("click", question3);
-        }
-
-        let question3 = function(){
-            $("h1").text("When do you have the most energy?");
-            $("#buttonA").text("When I wake up");
-        $("#buttonB").text("After a long nap in the middle of the day");
-        $("#buttonC").text("After an energy drink")
-        $("#buttonD").text("Late at night");
-        $("button").on("click", question4);
-        }
-        let question4 = function(){
-            $("h1").text("Which best describes your style?");
-            $("#buttonA").text("Causal");
-        $("#buttonB").text("Business");
-        $("#buttonC").text("Street wear")
-        $("#buttonD").text("Bummy");
-        $("button").on("click", question5);
-        }
-        let question5 = function(){
-          console.log("next question");
-         $("h1").text("How would you rate your current health habits?");
-        $("#buttonA").text("The healthiest I could be");
-        $("#buttonB").text("Below average Im alive arent I?");
-        $("#buttonC").text("Average Health")
-        $("#buttonD").text("Health habits?");
-        $("button").on("click", question6);
-        }
-        let question6 = function(){
-          console.log("next question");
-         $("h1").text("Which award would you like to receive?");
-        $("#buttonA").text("Strongest In the world");
-        $("#buttonB").text("Smartest In the world");
-        $("#buttonC").text("Fastest In the world")
-        $("#buttonD").text("Bravest in the world");
-        $("button").on("click", question7);
-        }
-        let question7 = function(){
-          console.log("next question");
-         $("h1").text("If you could live anywhere, where would you live?");
-        $("#buttonA").text("Paris");
-        $("#buttonB").text("Stay at home");
-        $("#buttonC").text("Rome")
-        $("#buttonD").text("Travel and never stop");
-        $("button").on("click", question8);
-        }
-        let question8 = function(){
-          console.log("next question");
-         $("h1").text("Is the glass half-empty or half-full?");
-        $("#buttonA").text("half empty");
-        $("#buttonB").text(" half full");
-        $("#buttonC").text("nearly empty")
-        $("#buttonD").text("nearly full");
-        $("button").on("click", question9);
-        }
-        let question9 = function(){
-          console.log("next question");
-         $("h1").text("How do you define success?");
-        $("#buttonA").text("Money");
-        $("#buttonB").text("Fame");
-        $("#buttonC").text("Glory")
-        $("#buttonD").text("History");
-        $("button").on("click", question10);
-        }
-        let question10 = function(){
-          console.log("next question");
-         $("h1").text("What are you most comfortable with?");
-        $("#buttonA").text("Fighting");
-        $("#buttonB").text("Talking");
-        $("#buttonC").text("Listening")
-        $("#buttonD").text("demanding");
-        $("button").on("click", question11);
-        }
-        let question11 = function(){
-            if (x<15){
-                $("h1").text("Enchancer")
-                $("button").hide();
-                $("p").prepend("You are strong willed and brave")
-            } else if(x<25){
-                $("h1").text("Conjuration")
-                $("button").hide();
-                $("p").prepend("you are witty and amazing at whatever you do")
-            } else if(x<35){
-                $("h1").text("Manipulation")
-                $("button").hide();
-                $("p").prepend("you are cunny and shy")
-            }
-            else {
-                $("h1").text("Transmutation")
-                $("button").hide();
-                $("p").prepend("The universe sings to you")
-            }
-        }
-
-     $("button").on ("click", question2);
-        
-    </script>
-    
-    
 </body>
+ 
 </html>
